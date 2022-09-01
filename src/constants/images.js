@@ -34,9 +34,13 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import wave from '../assets/wave.png';
+import wave1 from '../assets/wave1.gif';
 
 export default {
   email,
+  wave,
+  wave1,
   mobile,
   api,
   cpp,

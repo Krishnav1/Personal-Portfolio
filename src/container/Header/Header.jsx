@@ -1,9 +1,11 @@
-import React from 'react';
+import {React, useState} from 'react';
 import {motion} from 'framer-motion';
 import {images} from '../../constants';
+import ReactTooltip from 'react-tooltip';
 import {AppWrap} from '../../wrapper';
 import './Header.scss';
 import sound from '../../assets/audio.mp3'
+import '../../assets/audio.mp3'
 
 const scaleVariants = {
   whileInView: {
@@ -17,7 +19,17 @@ const scaleVariants = {
 }
 
 const Header = () => {
+
+  const [img, setImg] = useState(false);
+
   const handleOnClick = () =>{
+    if(img){
+      setImg(false)
+    }
+    else{
+      setImg(true)
+    }
+
     new Audio(sound).play()
   }
 
@@ -30,7 +42,8 @@ const Header = () => {
       >
         <div className='app__header-badge'>
           <div className='badge-cmp app__flex'>
-            <span onClick={handleOnClick}>👋</span>
+            <img onClick={handleOnClick} src={img ? images.wave1 : images.wave} />
+            
             <div style={{marginLeft: 20}}>
               <p className='p-text'>Hello, I am</p>
               <h1 className='head-text'>Krishna</h1>
@@ -40,6 +53,10 @@ const Header = () => {
           <div className='tag-cmp app__flex'>
             <p className='p-text'>MERN Stack Developer &</p>
             <p className='p-text'> Web3 Enthusiastic</p>
+          </div>
+
+          <div className='button'>
+            <a href="Krishna's Resume.pdf" download="Krishna's Resume.pdf" className='p-text'><span>Resume</span><i></i></a>
           </div>
         </div>
       </motion.div>

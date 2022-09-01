@@ -73,14 +73,17 @@
             text-transform: uppercase;
             text-align: right;
         }
+
     }
 
-    span{
-        font-size: 2.5rem;
+    img{
+        width: 25%;
         cursor: pointer;
+        margin-right: 8px;
+        border-radius: 20%;
 
         @media screen and (min-width: 2000px) {
-            font-size: 5rem;
+            width: 10%;
         }
         
     }
@@ -89,6 +92,90 @@
         justify-content: flex-start;
         align-items: flex-start;
     }
+}
+
+.app__header-badge .button{
+    // display: block;
+    padding-top: 2.3rem;
+    
+}
+.app__header-badge .button a{
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    padding: 7px 20px;
+    transition: 0.5s;
+    // color: #1e9bff;
+}
+
+.app__header-badge .button a:hover{
+    // letter-spacing: 0.25em;
+    background: #1e9bff;
+    color: #1e9bff;;
+    box-shadow: 0 0 35px #1e9bff;
+}
+
+.app__header-badge .button a::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+}
+
+.app__header-badge .button a span{
+    position: relative;
+    z-index: 1;
+}
+
+.app__header-badge .button a i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.app__header-badge .button a i::before{
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 100%;
+    width: 10px;
+    transform: translateX(-50%);
+    height: 10px;
+    background: #27282c;
+    border: 2px solid #1e9bff;
+    transition: 0.5s;
+}
+.app__header-badge .button a:hover i::before{
+    left: 0%;
+    // transform: translateX(-50%) rotate(45deg);
+    // box-shadow: 24px 23px #1e9bff;
+}
+
+
+
+.app__header-badge .button a i::after{
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 10px;
+    transform: translateX(-50%);
+    height: 10px;
+    background: #27282c;
+    border: 2px solid #1e9bff;
+    transition: 0.5s;
+}
+
+.app__header-badge .button a:hover i::after{
+    left: 100%;
+//     transform: translateX(-50%) rotate(45deg);
+//     box-shadow: 45px -50px #1e9bff;
+//
 }
 
 .app__header-circles{
@@ -185,5 +272,23 @@
 
     @media screen and (max-width: 1200px) {
         margin: 2rem 0;
+    }
+}
+
+.skills-tooltip {
+    max-width: 300px !important;
+    background-color: var(--white-color) !important;
+    box-shadow: 0 0 25p rgba(0,0,0,0.1) !important;
+    border-radius: 5px !important;
+    padding: 1rem !important;
+    color: var(--gray-color) !important;
+    text-align: center !important;
+    line-height: 1.5 !important;
+    opacity: 1 !important;
+
+    @media screen and (min-width: 2000px) {
+        font-size: 1.75rem !important;
+        max-width: 500px !important;
+        line-height: 2 !important;
     }
 }
