@@ -33,15 +33,18 @@
     
         p{
             font-weight: 600;
+            color: white;
         }
     
         a{
             text-decoration: none;
             font-weight: 500;
+            font-size: 15px;
+            color: white;
         }
     
         &:hover{
-            box-shadow: 0 0 25px #fef4f5;
+            box-shadow: 0 0 25px black;
         }
 
         @media screen and (max-width: 450px) {
@@ -55,7 +58,7 @@
 }
 
 .app__footer-cards .app__footer-card {
-    background-color: #f2f7fb;
+    background-color: #ed1f1f;
 }
 
 .app__footer-form{
@@ -76,7 +79,7 @@
             padding: 0.95rem;
             border: none;
             border-radius: 7px;
-            background-color: var(--primary-color);
+            background-color: var(--white-color);
             font-family: var(--font-base);
             color: var(--secondary-color);
             outline: none;
@@ -87,7 +90,7 @@
         }
 
         &:hover{
-            box-shadow: 0 0 25px var(--primary-color);
+            box-shadow: 0 0 20px black;
         }
     }
 
@@ -102,7 +105,14 @@
         font-family: var(--font-base);
         color: var(--white-color);
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+            box-shadow: 0 0 20px black;
+        }
     }
+
+    
 
     @media screen and (max-width: 768px) {
         width: 100%;

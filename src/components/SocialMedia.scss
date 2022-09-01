@@ -1,0 +1,84 @@
+.app__social .button{
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 0 5px;
+    background-color: #fff;
+    overflow: hidden;
+    background: var(--secondary-color);
+    // background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.4s ease-out;
+
+    .icon{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin-left: 3px;
+        border-radius: 50px;
+        box-sizing: border-box;
+        line-height: 50px;
+        text-align: center;
+        transition: all 0.4s ease-out;
+    }
+}
+
+.app__social .button:nth-child(1):hover .icon{
+    background: #1DA1F2;
+}
+
+.app__social .button:nth-child(2):hover .icon{
+    background: #E1306C;
+}
+
+.app__social .button:nth-child(3):hover .icon{
+    background: #333
+}
+
+.app__social .button:nth-child(4):hover .icon{
+    background: #1DA1F2;
+}
+
+.app__social .button:hover{
+    width: 180px;
+    color: white;
+}
+
+.app__social .button .icon a{
+    font-size: 25px;
+    line-height: 50px;
+    transition: all 0.4s ease-out;
+    
+}
+
+.app__social .button:hover .icon a{
+    color: #fff;
+}
+
+.app__social .button span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 50px;
+    margin-left: 10px;
+    transition: all 0.4s ease-out;
+}
+
+.app__social .button:nth-child(1) span{
+    color: #1DA1F2;
+}
+
+.app__social .button:nth-child(2) span{
+    color: #E1306C;
+}
+
+.app__social .button:nth-child(3) span{
+    color: #333
+}
+
+.app__social .button:nth-child(4) span{
+    color: #1DA1F2;
+}

@@ -3,6 +3,7 @@ import {motion} from 'framer-motion';
 import {images} from '../../constants';
 import {AppWrap} from '../../wrapper';
 import './Header.scss';
+import sound from '../../assets/audio.mp3'
 
 const scaleVariants = {
   whileInView: {
@@ -16,6 +17,10 @@ const scaleVariants = {
 }
 
 const Header = () => {
+  const handleOnClick = () =>{
+    new Audio(sound).play()
+  }
+
   return (
     <div className='app__header app__flex'>
       <motion.div
@@ -25,7 +30,7 @@ const Header = () => {
       >
         <div className='app__header-badge'>
           <div className='badge-cmp app__flex'>
-            <span>👋</span>
+            <span onClick={handleOnClick}>👋</span>
             <div style={{marginLeft: 20}}>
               <p className='p-text'>Hello, I am</p>
               <h1 className='head-text'>Krishna</h1>
@@ -33,8 +38,8 @@ const Header = () => {
           </div>
 
           <div className='tag-cmp app__flex'>
-            <p className='p-text'>Web Developer</p>
-            <p className='p-text'>Blockchain Developer</p>
+            <p className='p-text'>MERN Stack Developer &</p>
+            <p className='p-text'> Web3 Enthusiastic</p>
           </div>
         </div>
       </motion.div>
