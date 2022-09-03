@@ -4,10 +4,12 @@ import './About.scss';
 import {images} from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import {urlFor, client} from '../../client';
+import { Modal } from '../../components';
 
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     const query = '*[_type == "abouts"]';
@@ -18,7 +20,7 @@ const About = () => {
 
   return (
     <>
-      <h2 className='head-text'>I Know that <span>Good Development</span> <br /> means <span>Good Business</span></h2>
+      <h2 className='head-text app__flex'> Good Development = <h2 data-text="Good_Business" id="about1" className='head-text'> Good_Business </h2></h2>
       <div className='app__profiles'>
         {abouts.map((about, index) => (
           <motion.div
@@ -28,7 +30,8 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={urlFor(about.imgUrl)} alt={about.title}/>
+            <img src={urlFor(about.imgUrl)} alt={about.title} onClick={() => {setOpenModal(true);}}/>
+            {openModal && <Modal closeModal={setOpenModal} />}
             <h2 className='bold-text' style={{marginTop: 20}}>{about.title}</h2>
             <p className='p-text' style={{marginTop: 10}}>{about.description}</p>
           </motion.div>

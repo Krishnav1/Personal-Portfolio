@@ -36,8 +36,10 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import wave from '../assets/wave.png';
 import wave1 from '../assets/wave1.gif';
+import fronted from '../assets/fronted.jpg';
 
 export default {
+  fronted,
   email,
   wave,
   wave1,

@@ -1,5 +1,7 @@
 import {React, useState} from 'react';
 import {motion} from 'framer-motion';
+import {Typewriter} from "react-simple-typewriter";
+import "react-simple-typewriter/dist/index";
 import {images} from '../../constants';
 import ReactTooltip from 'react-tooltip';
 import {AppWrap} from '../../wrapper';
@@ -46,13 +48,23 @@ const Header = () => {
             
             <div style={{marginLeft: 20}}>
               <p className='p-text'>Hello, I am</p>
-              <h1 className='head-text'>Krishna</h1>
+              <span style={{color: '#313BAC', fontWeight: 'bold', fontSize: '2rem'}}>
+                <Typewriter
+                  loop
+                  cursor
+                  cursorStyle="_"
+                  typeSpeed={90}
+                  deleteSpeed={100}
+                  delaySpeed={1000}
+                  words={['Krishna', 'Developer', 'Coder', 'Designer']}
+                />
+                </span>
             </div>
           </div>
 
           <div className='tag-cmp app__flex'>
-            <p className='p-text'>MERN Stack Developer &</p>
-            <p className='p-text'> Web3 Enthusiastic</p>
+            <p className='p-text' style={{color: '#313BAC', fontWeight: 'bold', fontSize: '1rem'}}>MERN Stack Developer</p>
+            {/* <p className='p-text'> Web3 Enthusiastic</p> */}
           </div>
 
           <div className='button'>

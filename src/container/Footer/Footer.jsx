@@ -34,7 +34,7 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">To connect with me then chat with me</h2>
+      <h2 className='head-text app__flex'> To Connect = <h2 data-text="Chat_With_Me" id="chart" className='head-text'> Chat-With-Me </h2></h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card">
